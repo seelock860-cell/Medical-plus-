@@ -1,0 +1,57 @@
+├── .env.example                                      # Pre-configured with your Supabase credentials
+├── .gitignore                                        # Configured to ignore node_modules, dist, etc.
+├── README.md                                         # Comprehensive setup & architecture documentation
+├── index.html                                        # HTML entry point with Plus Jakarta Sans & SEO meta
+├── metadata.json                                     # Applet metadata
+├── package.json                                      # Project dependencies & build scripts
+├── tsconfig.json                                     # TypeScript configuration
+├── vercel.json                                       # Vercel SPA routing rewrite configuration
+├── vite.config.ts                                    # Vite bundler & Tailwind CSS v4 setup
+│
+├── public/                                           # Static assets copied directly to Vercel build
+│   └── assets/
+│       └── images/
+│           ├── hero_medicare_hospital_1793519704990.jpg
+│           ├── hospital_diagnostics_lab_1793519706973.jpg
+│           ├── doctor_adebayo_cmd_1793519705589.jpg
+│           ├── doctor_sarah_obgyn_1793519706364.jpg
+│           └── doctor_chioma_paediatrics_1793519707215.jpg
+│
+├── src/
+│   ├── main.tsx                                      # React root DOM mounting
+│   ├── App.tsx                                       # Main container & hash routing
+│   ├── index.css                                     # Tailwind CSS base styles & stable viewport rules
+│   │
+│   ├── context/
+│   │   └── AppContext.tsx                            # Central state store & URL hash router
+│   │
+│   ├── lib/
+│   │   └── supabase.ts                               # Supabase client & fallback persistence
+│   │
+│   ├── types/
+│   │   └── index.ts                                  # TypeScript interface declarations
+│   │
+│   ├── data/
+│   │   ├── initialData.ts                            # Initial services, doctors, & content
+│   │   └── sqlSchema.ts                              # Complete Supabase SQL script export
+│   │
+│   ├── components/
+│   │   ├── Navbar.tsx                                # 3-zone clean top bar navigation
+│   │   ├── HeroSection.tsx                           # Hospital hero with clinical photo & CTAs
+│   │   ├── WelcomeSection.tsx                        # Hospital mission & clinical care pillars
+│   │   ├── ServicesSection.tsx                       # 7 medical departments & details modal
+│   │   ├── DoctorsSection.tsx                        # Doctor directory with department filters
+│   │   ├── WhyChooseUsSection.tsx                    # Diagnostic laboratory & quality pillars
+│   │   ├── AppointmentBookingSection.tsx             # Validated booking form & WhatsApp confirm
+│   │   ├── TestimonialsSection.tsx                   # Attributable patient outcome reviews
+│   │   ├── ContactSection.tsx                        # Hospital desk & emergency notices
+│   │   ├── Footer.tsx                                # Privacy notice, disclaimers, & copyright
+│   │   ├── FloatingWhatsApp.tsx                      # Stable floating WhatsApp button
+│   │   └── admin/
+│   │       └── AdminDashboard.tsx                    # Secure admin console (hidden at #/admin)
+│   │
+│   └── assets/
+│       └── images/                                   # High-resolution clinical photography
+│
+└── supabase/
+    └── schema.sql                                    # Full SQL script with RLS & seed data
